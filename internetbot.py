@@ -2,7 +2,7 @@ import slack
 import os
 import speedtest
 
-SLACK_TOKEN=os.environ("SLACK_TOKEN")
+SLACK_TOKEN=os.environ["SLACK_TOKEN"]
 CHANNEL="#internet-bot"
 
 try:

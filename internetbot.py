@@ -6,7 +6,7 @@ SLACK_TOKEN=os.environ["SLACK_TOKEN"]
 CHANNEL="#internet-bot"
 
 try:
-    st = speedtest.Speedtest()
+    st = speedtest.Speedtest(secure=1)
     down_speed = st.download()
     down_speed_megabits= str(round(down_speed/1000000, 2))
     msg="Olá eu sou o InternetBot \n" + "A velocidade atual da internet do Lead é de {} Mbps".format(down_speed_megabits)
